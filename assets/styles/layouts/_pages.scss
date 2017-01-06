@@ -1,0 +1,182 @@
+main.main {
+    min-height: 300px;
+  }
+  .homepage-outer {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &#homepage-area-top {
+      position: fixed;
+      main {
+        min-height: 467px;
+
+        .home-top-content {
+
+          top: 50%;
+          -ms-transform: translate(0, -50%);
+          -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+
+          @media(max-width: $screen-xs-min) {
+            position: fixed;
+            top: 0;
+            -ms-transform: translate(0, 0);
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+            margin-bottom: 30px;
+          }
+
+          h1 {
+            @include font-size(3.6);
+            text-transform: uppercase;
+
+            @media(max-width: $screen-xs-min) {
+              @include font-size(2.4);
+              margin-top: 30px;
+            }
+
+          }
+          p {
+
+            //use mixin font-size on C:\xampp\htdocs\wp1\wp-content\themes\masterwp\assets\styles\common\_variables.scss
+            //@include font-face(sans-serif);
+            //use mixin font-size on C:\xampp\htdocs\wp1\wp-content\themes\masterwp\assets\styles\common\_variables.scss
+            @include font-size(2);
+            //use mixin font-size on C:\xampp\htdocs\wp1\wp-content\themes\masterwp\assets\styles\common\_variables.scss
+            @media(max-width: $screen-xs-min) {
+              @include font-size(1.6);
+            }
+          }
+        }
+      }
+    }
+
+    &#homepage-area-middle {
+      position: relative;
+
+      .homepage-area-middle-left-image {
+        width: 585px;
+        height: 196px;
+      }
+      .homepage-area-middle-left-content {
+        padding: 42px 54px 20px 54px;
+
+        @media(max-width: $screen-lg-min) {
+          padding: 20px 10px 15px;
+        }
+
+        p {
+          @include font-size(1.6);
+          line-height: 1.45;
+        }
+
+        blockquote {
+          /*Borders - (Optional)*/
+          border-left: 15px solid #c76c0c;
+          border-right: 2px solid #c76c0c;
+          p {
+            display: block;
+            background: #fff;
+            padding: 15px 20px 15px 45px;
+            margin: 0 0 20px;
+            position: relative;
+
+            /*Font*/
+            font-family: Georgia, serif;
+            font-size: 16px;
+            line-height: 1.2;
+            color: #666;
+            text-align: justify;
+
+            /*Box Shadow - (Optional)*/
+            -moz-box-shadow: 2px 2px 15px #ccc;
+            -webkit-box-shadow: 2px 2px 15px #ccc;
+            box-shadow: 2px 2px 15px #ccc;
+
+            //use mixin font-size on C:\xampp\htdocs\wp1\wp-content\themes\masterwp\assets\styles\common\_variables.scss
+            @include font-size(1.4);
+            //use mixin font-size on C:\xampp\htdocs\wp1\wp-content\themes\masterwp\assets\styles\common\_variables.scss
+            line-height: 1.7;
+          }
+        }
+
+      }
+
+      .homepage-area-middle-right-image {
+        //width: 100%;
+        width: 585px;
+        height: 588px;
+      }
+
+    }
+
+    &#homepage-area-bottom {
+      position: relative;
+      main {
+        min-height: 727px;
+
+        .home-bottom-content {
+          position: absolute;
+          top: 50%;
+          -ms-transform: translate(0, -50%);
+          -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+
+          @media(max-width: $screen-sm-min) {
+            position: relative;
+            top: 0;
+            -ms-transform: translate(0, 0);
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+            margin-top: 30px;
+            margin-bottom: 30px;
+          }
+
+          .header-bottom {
+            @include font-size(2.4);
+            margin-bottom: 27px;
+            text-transform: uppercase;
+          }
+          .row {
+            margin-bottom: 76px;
+
+            @media(max-width: $screen-sm-min) {
+              margin-bottom: 0;
+            }
+
+            &#content-left {
+              padding-right: 10px;
+              @media(max-width: $screen-sm-min) {
+                padding-right: 0;
+              }
+            }
+
+            &#content-right {
+              padding-left: 10px;
+              @media(max-width: $screen-sm-min) {
+                padding-left: 0;
+              }
+            }
+
+            p {
+
+              //use Variables example : $font-stack for 'font' and $primary-color for 'color'
+              $font-stack: Helvetica, sans-serif;
+              $primary-color: #333;
+              font: 100% $font-stack;
+              color: $primary-color;
+              //use Variables example : $font-stack for 'font' and $primary-color for 'color'
+
+              //use mixin font-size on C:\xampp\htdocs\wp1\wp-content\themes\masterwp\assets\styles\common\_variables.scss
+              @include font-size(1.4);
+              //use mixin font-size on C:\xampp\htdocs\wp1\wp-content\themes\masterwp\assets\styles\common\_variables.scss
+
+              line-height: 1.65;
+              margin: 0px 0 25px;
+            }
+          }
+        }
+      }
+    }
+  }

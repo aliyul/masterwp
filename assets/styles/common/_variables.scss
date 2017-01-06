@@ -1,0 +1,150 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+$brand-primary:         #27ae60;
+
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+
+//== Scaffolding
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$gray-color: #999999;
+$gray2-color: #5e6a71;
+$red-color: #981e32;
+$red2-color: #c60c30;
+$white-color: #ffffff;
+$blue-color: #1b6683;
+$black-color: #000000;
+
+$primary-color: $black-color;
+
+//** Global textual link color.
+$link-color:            $blue-color !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($blue-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: none !default;
+
+
+$link-color: $blue-color;
+$link-hover-color: $blue-color;
+
+
+$primary-color: #66727f;
+$gray3-color: #898989;
+$gray4-color: #c6c8ca;
+$white2-color: #f1f1f1;
+$white3-color: #f0f0f0;
+$blue2-color: #1b6683;
+$blue3-color: #114f67;
+$blue4-color: #104a61;
+$blue5-color: #073b4f;
+$blue6-color: #062937;
+$green-color: #61bc46;
+$green2-color: #60bc46;
+$green3-color: #62bc46;
+$green4-color: #4ba033;
+$green5-color: #60bb46;
+$orange-color: #f16725;
+
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * $font-size-base);
+  font-size: $sizeValue + rem;
+}
+
+@mixin font-face($font-family, $font-url, $font-name, $style, $weight) {
+  @font-face {
+    font: {
+      family: $font-family;
+      style: $style;
+      weight: $weight;
+    }
+    src: url($font-url + '/' + $font-name + '.eot') format('eot'),
+    url($font-url + '/' + $font-name + '.woff') format('woff'),
+    url($font-url + '/' + $font-name + '.ttf')  format('truetype'),
+    url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');
+  }
+}
+
+
+@include font-face("proxima-nova", '../fonts','proximanova-regular-webfont', 'normal', 'normal');
+@include font-face("proxima-nova-extra-bold", '../fonts','proximanova-extrabold-webfont', 'normal', 'normal');
+@include font-face("proxima-nova-bold", '../fonts','proximanova-bold-webfont', 'normal', 'normal');
+@include font-face("proxima-nova-light", '../fonts','proximanova-light-webfont', 'normal', 'normal');
+@include font-face("proxima-nova-light-italic", '../fonts','proximanova-light-webfont', 'italic', 'normal');
+
+
+$font-proxima-nova: proxima-nova, sans-serif;
+$font-proxima-nova-extra-bold: proxima-nova-extra-bold, sans-serif;
+$font-proxima-nova-bold: proxima-nova-bold, sans-serif;
+$font-proxima-nova-light: proxima-nova-light, sans-serif;
+$font-proxima-nova-light-italic: proxima-nova-light-italic, sans-serif;
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$margin-top:                 400px !default;
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// Large screen2 / wide desktop2
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg2:                  1400px !default;
+$screen-lg2-min:              $screen-lg2 !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg2-desktop:          $screen-lg2-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xss-max:              ($screen-xs-min - 1) !default;
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-lg-max:              ($screen-lg2-min - 1) !default;
+
+
+$screen-custom-small: 600px;
+
+
+

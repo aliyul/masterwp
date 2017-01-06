@@ -1,0 +1,132 @@
+.carousel-inner>.item>a>img,
+.carousel-inner>.item>img.image-slider
+{
+  width: 100%;
+  height: 196px;
+
+}
+
+#homeCarousel
+{
+  @media (width: $screen-xs){
+    display: none;
+  }
+
+
+
+  .container-carousel-indicators
+  {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    margin-left: -30%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+
+    .carousel-indicators
+    {
+      position: relative;
+      margin: auto;
+      left: 0;
+      width: auto;
+      display: inline-block;
+      background-color: rgba(0,0,0,0.6);
+      padding: 10px 15px 5px;
+
+      @media screen and (min-width: $screen-sm)
+      {
+        bottom: 0;
+      }
+
+      li
+      {
+        background-color: $gray3-color;
+        border: 1px solid $gray3-color;
+        margin: auto 3px;
+        width: 12px;
+        height: 12px;
+      }
+
+      .active
+      {
+        background-color: $green-color;
+        border: 1px solid $green-color;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  .carousel-item
+  {
+
+
+    .carousel-item-container
+    {
+      display: none;
+    }
+
+    &.active
+    {
+      .carousel-item-container
+      {
+        display: block;
+        width: 100%;
+        height: 196px;
+
+      }
+      position: relative;
+
+      .carousel-item-container
+      {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        top: 50%;
+        -ms-transform: translate(0, -50%); /* IE 9 */
+        -webkit-transform: translate(0, -50%); /* Chrome, Safari, Opera */
+        transform: translate(0, -50%);
+
+        .carousel-item-container-title
+        {
+          text-align: center;
+          p
+          {
+            @include font-size(2.8);
+            color: $white-color;
+            margin-bottom: 30px;
+          }
+        }
+
+        .carousel-item-container-link
+        {
+          text-align: center;
+
+          a
+          {
+            @include font-size(2.8);
+            color: $white-color;
+            padding: 20px 50px;
+            display: inline-block;
+            background-color: rgba(0,0,0,0.6);
+            letter-spacing: 2px;
+
+            &:focus,
+            &:hover
+            {
+              background-color: $blue2-color;
+            }
+
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+}

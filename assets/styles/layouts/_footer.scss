@@ -1,0 +1,49 @@
+footer.content-info {
+    border-top: 10px $gray-color solid;
+    background-color: $gray2-color;
+    color: $white-color;
+    padding-bottom: 50px;
+    position: relative;
+
+    a {
+      color: $white-color;
+
+      &:focus,
+      &:hover {
+        color: $white-color;
+        text-decoration: underline;
+      }
+
+    }
+    .footer-logo {
+      //width: 100%;
+      width: 172px;
+      height: 162px;
+    }
+    .footer-logo-container {
+      @media(max-width: $screen-sm-min) {
+        text-align: center;
+        margin: auto;
+      }
+    }
+
+    .footer-widget {
+      margin-top: 54px;
+
+      @media(max-width: $screen-sm-min) {
+        text-align: center;
+      }
+
+      h3 {
+        @include font-size(1.8);
+        text-transform: uppercase;
+        margin-top: 30px;
+        margin-bottom: 4px;
+      }
+
+      p {
+        @include font-size(1.4);
+        line-height: 1.75;
+      }
+    }
+  }
